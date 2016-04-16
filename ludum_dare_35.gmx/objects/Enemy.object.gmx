@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>LifeformParent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,8 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspd = 0;
+            <string>event_inherited();
+
+hspd = 0;
 vspd = 0;
+
+target = Player;
+
+state = scr_init()
 </string>
           </argument>
         </arguments>
@@ -51,31 +57,7 @@ vspd = 0;
             <kind>1</kind>
             <string>//Step Event
 
-direction = point_direction(x, y, Player.x, Player.y);
-hspd = lengthdir_x(1,direction);
-vspd = lengthdir_y(1,direction);
-
-collision_object = Player;
-
-
-//Horizontal Collisions
-if(place_meeting(x+hspd, y, collision_object)){
-   while(!place_meeting(x+sign(hspd), y, collision_object)){
-       x += sign(hspd);
-   }
-   hspd = 0;//if there is something right, set hspd to 0
-}
-x += hspd;
-
-//Vertical Collisions
-if(place_meeting(x, y+vspd, collision_object)){
-   while(!place_meeting(x, y+sign(vspd), collision_object)){
-       y += sign(vspd);
-   }
-   vspd = 0;
-}
-y += vspd;
-
+script_execute(state);
 
 </string>
           </argument>
