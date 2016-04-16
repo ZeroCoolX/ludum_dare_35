@@ -26,6 +26,7 @@
     <object>objects\Wall</object>
     <object>objects\LifeformParent</object>
     <object>objects\Mouse</object>
+    <object>objects\obj_cooper</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
