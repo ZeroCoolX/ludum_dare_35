@@ -15,10 +15,17 @@
     <background>background\bk_test</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_init.gml</script>
+    <script>scripts\scr_move.gml</script>
+    <script>scripts\scr_idle.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\Player</object>
     <object>objects\Enemy</object>
-    <object>objects\obj_Wall</object>
+    <object>objects\Wall</object>
+    <object>objects\LifeformParent</object>
+    <object>objects\Mouse</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
