@@ -26,7 +26,11 @@
     <object>objects\Wall</object>
     <object>objects\LifeformParent</object>
     <object>objects\Mouse</object>
+<<<<<<< HEAD
     <object>objects\obj_ryan</object>
+=======
+    <object>objects\obj_cooper</object>
+>>>>>>> d81d40ee1816310d385a10b4c3677f99aa9cfabc
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_1</room>
